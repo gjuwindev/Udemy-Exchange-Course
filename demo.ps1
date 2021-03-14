@@ -13,5 +13,3 @@ New-MsolUser -UserPrincipalName gju_demo_user@m.ffzg.hr `
              -LicenseAssignment "ffzghr:STANDARDWOFFPACK_IW_STUDENT"
 # can add    -Password <password>
 
-
-             Get-MsolAccountSku
