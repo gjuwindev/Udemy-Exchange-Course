@@ -18,3 +18,6 @@
 
 # how to add mail aliases and how to make them primary
 
+# can users themselves register for an alias, without an administrator?
+
+# Get-Mailbox pgklada | Select-Object PrimarySmtpAddress, Name, Id, DistinguishedName, SimpleDisplayName, RecipientType, EmailAddresses, DisplayName, Alias, AdministrativeUnits, AddressListMembership, UsageLocation, DefaultAuditSet, WindowsLiveID, MicrosoftOnlineServicesID, UserPrincipalName, IssueWarningQuota, RulesQuota, IsMailboxEnabled, Languages, ProhibitSendReceiveQuota, ProhibitSendQuota, RecoverableItemsQuota, RecoverableItemsWarningQuota, ForwardingSmtpAddress, ForwardingAddress, RetentionPolicy
