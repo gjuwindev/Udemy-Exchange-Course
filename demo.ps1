@@ -5,11 +5,11 @@
 
 # Get-MsolAccountSku  # shows available licence packages
 
-New-MsolUser -UserPrincipalName gju_demo_user@m.ffzg.hr `
-             -FirstName Caleb `
-             -LastName Sills `
-             -DisplayName "Caleb Sills" `
-             -UsageLocation HR `
-             -LicenseAssignment "ffzghr:STANDARDWOFFPACK_IW_STUDENT"
-# can add    -Password <password>
-
+# Import-Csv -Path c:\users.csv | foreach {
+#     New-MsolUser -DisplayName $_.DisplayName `
+#                  -FirstName $_.FirstName `
+#                  -LastName $_.LastName `
+#                  -UserPrincipalName $_.UserPrincipalName `
+#                  -UsageLocation $_.UsageLocation `
+#                  -LicenceAssignment $_.AccountSkuId `
+#                  -Password $_.Password}
