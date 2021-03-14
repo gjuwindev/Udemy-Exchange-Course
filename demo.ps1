@@ -13,3 +13,8 @@
 #                  -UsageLocation $_.UsageLocation `
 #                  -LicenceAssignment $_.AccountSkuId `
 #                  -Password $_.Password}
+
+# how to enable multifactor authentication from powershell
+
+# how to add mail aliases and how to make them primary
+
