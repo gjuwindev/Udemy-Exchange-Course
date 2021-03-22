@@ -53,13 +53,13 @@
 # Set-OrganizationConfig | fl AutoExpandingArchiveEnabled
 # Enable-Mailbox pgklada@ffug.hr -AutoExpandingArchiveEnabled
 
+# $user.lastpasswordchangetimestamp.adddays(7) -ge $today
 
+# New-DistributionGroup -Name <group_name> -Members <member_list>
+# Remove-DistributionGroup infosluzba_test_DL2
 
+# $members = Get-DistributionGroupMember infosluzba_test_DL | Select -ExpandProperty primarysmtpaddress
+# New-DistributionGroup infosluzba_test_DL2 -Members $members
 
-
-
-
-
-
-
-
+# Get-DistributionGroup [ <list_name> ]
+# Get-DistributionGroupmember <list_name> | select name, primarysmtpaddress
