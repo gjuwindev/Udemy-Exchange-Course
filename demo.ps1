@@ -58,8 +58,18 @@
 # New-DistributionGroup -Name <group_name> -Members <member_list>
 # Remove-DistributionGroup infosluzba_test_DL2
 
-# $members = Get-DistributionGroupMember infosluzba_test_DL | Select -ExpandProperty primarysmtpaddress
+# $members = Get-DistributionGroupMember infosluzba_test_DL | Select -ExpandProperty PrimarySmtpAddress
 # New-DistributionGroup infosluzba_test_DL2 -Members $members
+
+# Set-DistributionGroup ...
 
 # Get-DistributionGroup [ <list_name> ]
 # Get-DistributionGroupmember <list_name> | select name, primarysmtpaddress
+
+# email-enabled security group
+# New-DistributionGroup infosluzba_test_DL2 -Members $members -Type Security
+
+# New-UnifiedGroup -DisplayName <group_name> -Members <member_list> -PrimarySmtpAddress <email_address>
+
+# Get-DynamicDistributionGroup 
+
