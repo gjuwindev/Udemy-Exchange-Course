@@ -5,15 +5,18 @@
 
 # Get-MsolAccountSku  # shows available licence packages
 
-# Import-Csv -Path c:\users.csv | foreach {
-#     New-MsolUser -DisplayName $_.DisplayName `
-#                  -FirstName $_.FirstName `
-#                  -LastName $_.LastName `
-#                  -UserPrincipalName $_.UserPrincipalName `
-#                  -UsageLocation $_.UsageLocation `
-#                  -LicenceAssignment $_.AccountSkuId `
-#                  -Password $_.Password}
+# $userLicence = "ffzghr:STANDARDWOFFPACK_IW_STUDENT"
+# $userLicence = "ffzghr:STANDARDWOFFPACK_IW_FACULTY"
 
+# Import-Csv -Path c:\users.csv | foreach {
+    #     New-MsolUser -DisplayName $_.DisplayName `
+    #                  -FirstName $_.FirstName `
+    #                  -LastName $_.LastName `
+    #                  -UserPrincipalName $_.UserPrincipalName `
+    #                  -UsageLocation $_.UsageLocation `
+    #                  -LicenceAssignment $_.AccountSkuId `
+    #                  -Password $_.Password}
+    
 # how to enable multifactor authentication from powershell
 # how to enable MFA via mobile phone, but disable mobile phone number display to everybody
 
@@ -72,4 +75,21 @@
 # New-UnifiedGroup -DisplayName <group_name> -Members <member_list> -PrimarySmtpAddress <email_address>
 
 # Get-DynamicDistributionGroup 
+# New-DynamicDistributionGroup -Name HR -PrimarySmtpAddress <email> -Alias <name_alias> -Includerecipients mailusers,maxilboxusers -ConditionalDepartments "HR"
+# Set-DynamicDistributionGroup <email> -ManagedBy <email_address>
+
+# New-Mailbox -Shared -Name <mbox_name> -PrimarySmtpAddress <email>
+# Add-MailboxPermission <shared_email_address> -AccessRights fullaccess -User <user_email>
+# Remove-MailboxPermission <shared_email_address> -AccessRights fullaccess -User <user_email>  [ -Force? ]
+# Add-MailboxPermission <shared_email_address> -AccessRights fullaccess -Automapping $false -User <user_email>
+# Set-Mailbox <email> -Type shared
+# Set-Mailbox <email> -Type regular
+# Add-RecipientPermission <shared_email_address>  -AccessRights SendAs -Trustee <user_email> [ -Force? ]
+# Remove-RecipientPermission <shared_email_address>  -AccessRights SendAs -Trustee <user_email> [ -Force? ]
+
+# Set-DistributionGroup <mailbox_email> -GrantSendOnBehalf <user_email>
+# Set-Mailbox <mailbox_email> -GrantSendOnBehalf <user_email>
+# Set-DynamicDistributionGroup <mailbox_email> -GrantSendOnBehalf <user_email>
+# Set-DynamicDistributionGroup <mailbox_email> -GrantSendOnBehalf @{remove="<user_name?>"}
+# Get-DistributionGroup <mailbox_email> | fl name, GrantSendOnBehalf
 
