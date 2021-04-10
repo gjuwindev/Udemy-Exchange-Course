@@ -104,3 +104,16 @@ Write-Output "`n`$Session_Compliance Imported..."
 # Connect-SPOService -URL "http://azmtp.admin.sharepoint.com" -Credential $LdapUserCredential
 # Get-SPOSite
 
+Write-Output "`nConnecting to SharePoint administration site..."
+
+Import-Module Microsoft.Online.SharePoint.PowerShell
+Connect-SPOService -URL "http://ffzghr.admin.sharepoint.com" --Credential $O365UserCredential 
+
+Write-Output "`nConnected to SharePoint administration site..."
+
+# Get-SPOSite
+
+
+# Get-SPOExternalUser
+# Remove-SPOExternalUser
+# 
