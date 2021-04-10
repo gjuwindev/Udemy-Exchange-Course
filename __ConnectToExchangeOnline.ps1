@@ -77,6 +77,14 @@ Write-Output "`n`$Session_Compliance Imported..."
 # Write-Output "`nConnecting to AzureAD..."
 # Connect-AzureAD -Credential $O365UserCredential
 
+############################################################################
+
+# Get-MsolUser
+# Get-MsolRole
+# Add-MsoldRoleMember
+# Get-MsoldRoleMember
+# Remove-MsolRoleMember
+
 # Get-Mailbox pgklada@m.ffzg.hr | fl audit*
 # Get-Mailbox -ResultSize unlimited | foreach { if ($_.AuditEnabled -eq $false) { $_ } }
 # Set-Mailbox <email_address> -AuditOwner @{Add="mailboxlogin", "harddelete"}
@@ -86,4 +94,13 @@ Write-Output "`n`$Session_Compliance Imported..."
 # Set-HostedConnectionFilterPolicy "Default" -IPAllowList @{add="IP1-IP2"...} -IPBlockList @{remove="IP3", "IP4"...}
 
 
+############################################################################
+####################            SHAREPOINT            ######################
+############################################################################
+
+# install AzureAD connect and sharepoint online management shell
+# Import-Module Microsoft.Online.SharePoint.PowerShell
+# $cred = Get-Credential ...
+# Connect-SPOService -URL "http://azmtp.admin.sharepoint.com" -Credential $LdapUserCredential
+# Get-SPOSite
 
